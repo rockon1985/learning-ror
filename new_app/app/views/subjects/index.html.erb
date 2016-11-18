@@ -1,0 +1,13 @@
+<% if @books.blank? %>
+    <div class="well">There are no Subjects currently in the system.</div>
+<% else %>
+    <div class="well">These are the current subjects in our system</div>
+
+    <ul id = "books" slass="list-group">
+        <% @subjects.each do |item| %>    
+        <li class="list-group-item clearfix">
+            <%= item.name %>  
+        </li>
+        <% end %>
+    </ul>
+<% end %>

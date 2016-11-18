@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= @book.title %></h3>
+  </div>
+  <div class="panel-body clearfix">
+    <p>
+	   <strong>Price: </strong> $<%= @book.price %><br />
+	   <strong>Subject :</strong> <%= @book.subject.name %><br />
+	   <strong>Created Date:</strong> <%= @book.created_at %><br />
+	</p>
+	<p><%= @book.description %></p>
+	<div class="pull-right"><%= link_to 'Back To Listing', {:action => 'list'} %></div>
+  </div>
+</div>
+
