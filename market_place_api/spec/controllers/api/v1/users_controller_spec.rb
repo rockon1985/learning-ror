@@ -106,4 +106,16 @@ describe Api::V1::UsersController do
       end
     end
   end
+
+  describe "DELETE #destroy" do
+    before(:each) do
+      @user = FactoryGirl.create :user
+      delete :destroy, { id: @user.id }, format: :json
+    end
+
+    it "should respond_with 200 http status" do
+      status_code = response.instance_variable_get(:@status)
+      expect(status_code).to eql 200
+    end
+  end
 end
